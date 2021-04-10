@@ -17,8 +17,17 @@ publishdir = "public"
 title = "Szymon Sokołowski"
 subtitle = "fotografia i retusz"
 author = "Szymon Sokołowski"
-description = ""
-keywords = ""
+description = "Profesjonalna fotografia i retusz beauty."
+keywords = "fotografia, retusz"
+
+aboutMe = """
+Zarówno w fotografii, jak i retuszu najbardziej interesuje mnie obszar beauty i fashion.
+Aktualnie działam też w fotografii stockowej, produktowej, dokumentacji dzieł sztuki oraz wystaw.
+Mieszkam w Krakowie.
+
+Fotografia jest medium, w którym najbardziej lubię pracować, bo daje mi przestrzeń na ekspresję mojego spojrzenia.
+Zanim odkryłem, że jest to kierunek w którym chce się realizować, studiowałem filozofię przez 5 lat, a wcześniej inżynierię produkcji. W fotografii zaczynałem od aparatu analogowego, by z czasem odkryć, że fotografia cyfrowa daje nieporównywalnie większe możliwości.
+"""
 
 # Social Media
 twitter = ""
