@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+	<head>
+		{{ partial "head.html" . }}
+		{{ template "_internal/google_analytics.html" . }}
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			{{ partial "header.html" . }}
+
+			<section id="main">
+			{{ range resources.Match "images/*" }}
+			{{ if eq .ResourceType "image" }}
+				<article class="thumb">
+					{{ $title := .Name | replaceRE "^(?:.*/)*(?:\\d+[-_ ]*)?(.*)\\.\\w+$" "$1" | replaceRE "[-_ ]+" " " }}
+					{{ $thumb := .Fit "700x700" }}
+					<a href="{{ .Permalink }}" class="image"><img src="{{ .Permalink }}" alt="" /></a>
+					{{ with $title }}
+					<h2>{{ $title }}</h2>
+					{{ end }}
+				</article>
+			{{ end }}
+			{{ end }}
+			</section>
+
+			{{ partial "footer.html" . }}
+		</div>
+
+		<!-- Scripts -->
+	</body>
+</html>

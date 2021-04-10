@@ -1,0 +1,21 @@
+		<title>{{ .Site.Title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}" />
+		<meta name="keywords" content="{{ with .Site.Params.keywords }}{{ . }}{{ end }}" />
+		<meta name="author" content="{{ with .Site.Params.author }}{{ . }}{{ end }}" />
+		<link rel="icon" href="{{ .Site.Params.BaseURL }}favicon.ico" />
+
+		{{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+		{{ $noscriptStyle := resources.Get "scss/noscript.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+
+		<link rel="stylesheet" href="{{ $style.Permalink }}" />
+		<noscript><link rel="stylesheet" href="{{ $noscriptStyle.Permalink }}" /></noscript>
+
+		<script src="{{ .Site.BaseURL }}js/jquery.min.js"></script>
+		<script src="{{ .Site.BaseURL }}js/jquery.poptrox.min.js"></script>
+		<script src="{{ .Site.BaseURL }}js/browser.min.js"></script>
+		<script src="{{ .Site.BaseURL }}js/breakpoints.min.js"></script>
+		<script src="{{ .Site.BaseURL }}js/util.js"></script>
+		<script src="{{ .Site.BaseURL }}js/main.js"></script>
+
