@@ -15,9 +15,7 @@
 					{{ $title := .Name | replaceRE "^(?:.*/)*(?:\\d+[-_ ]*)?(.*)\\.\\w+$" "$1" | replaceRE "[-_ ]+" " " }}
 					{{ $thumb := .Fit "700x700" }}
 					<a href="{{ .Permalink }}" class="image"><img src="{{ .Permalink }}" alt="" /></a>
-					{{ with $title }}
 					<h2>{{ $title }}</h2>
-					{{ end }}
 				</article>
 			{{ end }}
 			{{ end }}
